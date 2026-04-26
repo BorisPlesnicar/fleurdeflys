@@ -49,7 +49,7 @@ export default function ShopGrid() {
       >
         <div>
           <p className="eyebrow">Collection</p>
-          <h2 className="display-headline mt-6 text-[32px] text-onyx sm:text-[40px] lg:text-[48px]">
+          <h2 className="display-headline mt-6 text-[clamp(1.65rem,5.5vw,2rem)] text-onyx sm:text-[40px] lg:text-[48px]">
             {headline}
           </h2>
         </div>

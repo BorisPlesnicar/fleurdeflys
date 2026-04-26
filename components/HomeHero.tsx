@@ -46,7 +46,7 @@ export default function HomeHero() {
   return (
     <section
       aria-label="FLEUR DE LYS — Willkommen"
-      className="relative isolate -mt-16 min-h-[100svh] w-full overflow-hidden bg-onyx pb-28 pt-28 text-ivory sm:-mt-20 sm:pb-32 sm:pt-32 lg:min-h-[min(100svh,920px)] lg:pb-28 lg:pt-24"
+      className="relative isolate -mt-16 min-h-[100svh] w-full overflow-hidden bg-onyx pb-[max(7rem,env(safe-area-inset-bottom,0px)+5.5rem)] pt-24 text-ivory supports-[min-height:100dvh]:min-h-[100dvh] sm:-mt-20 sm:pb-32 sm:pt-32 lg:min-h-[min(100svh,920px)] lg:pb-28 lg:pt-24"
     >
       {/* Hintergrund: Foto + dezente Lesbarkeit — ohne „Glass-Stack“ */}
       <div className="absolute inset-0">
@@ -71,7 +71,11 @@ export default function HomeHero() {
         </motion.div>
         <div
           aria-hidden
-          className="absolute inset-0 bg-[linear-gradient(100deg,rgba(12,11,9,0.88)_0%,rgba(12,11,9,0.72)_42%,rgba(12,11,9,0.28)_72%,rgba(12,11,9,0.45)_100%)]"
+          className="absolute inset-0 bg-[linear-gradient(165deg,rgba(10,9,8,0.92)_0%,rgba(12,11,9,0.78)_38%,rgba(12,11,9,0.32)_62%,rgba(8,7,6,0.58)_100%)] lg:hidden"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 hidden bg-[linear-gradient(100deg,rgba(12,11,9,0.88)_0%,rgba(12,11,9,0.72)_42%,rgba(12,11,9,0.28)_72%,rgba(12,11,9,0.45)_100%)] lg:block"
         />
         <div
           aria-hidden
@@ -84,11 +88,11 @@ export default function HomeHero() {
         {/* Rechte Bildhälfte etwas abdunkeln — Typo + Flakon lesbarer */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 right-0 z-[1] w-full max-w-[min(100%,520px)] bg-[linear-gradient(270deg,rgba(8,7,6,0.78)_0%,rgba(8,7,6,0.35)_45%,transparent_100%)] sm:max-w-[560px] lg:max-w-[640px]"
+          className="pointer-events-none absolute inset-y-0 right-0 z-[1] hidden w-full max-w-[min(100%,520px)] bg-[linear-gradient(270deg,rgba(8,7,6,0.78)_0%,rgba(8,7,6,0.35)_45%,transparent_100%)] sm:max-w-[560px] lg:block lg:max-w-[640px]"
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[inherit] w-full max-w-[1320px] flex-col gap-16 px-6 sm:gap-20 sm:px-12 lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:px-16 xl:px-20">
+      <div className="relative z-10 mx-auto flex min-h-[inherit] w-full max-w-[1320px] flex-col gap-10 px-4 pl-[max(1rem,env(safe-area-inset-left,0px))] pr-[max(1rem,env(safe-area-inset-right,0px))] sm:gap-20 sm:px-12 sm:pl-12 sm:pr-12 lg:flex-row lg:items-center lg:justify-between lg:gap-12 lg:px-16 xl:px-20">
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -100,20 +104,20 @@ export default function HomeHero() {
             {intro.eyebrow}
           </p>
 
-          <h1 className="display-headline mt-6 text-[clamp(2.5rem,7vw,5rem)] leading-[0.96] tracking-tight text-ivory">
+          <h1 className="display-headline mt-5 text-[clamp(2.15rem,6.5vw,5rem)] leading-[0.96] tracking-tight text-ivory sm:mt-6">
             {intro.title}
             <br />
             <span className="italic text-soft-gold">{intro.titleAccent}</span>
           </h1>
 
-          <p className="mt-6 max-w-md font-display text-[17px] leading-[1.55] text-ivory/90 sm:text-[19px]">
+          <p className="mt-5 max-w-md font-display text-[16px] leading-[1.58] text-ivory/90 sm:mt-6 sm:text-[19px]">
             {intro.subtitle}
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-7 flex w-full flex-col gap-3 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               href={intro.cta.href}
-              className="group/btn inline-flex h-12 items-center gap-2.5 border border-ivory/40 bg-onyx/30 px-8 text-[11px] uppercase tracking-[0.34em] text-ivory transition-colors duration-300 hover:border-soft-gold hover:text-soft-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-onyx/60 sm:h-[3.25rem] sm:text-[12px]"
+              className="group/btn inline-flex h-12 w-full touch-manipulation items-center justify-center gap-2.5 border border-ivory/40 bg-onyx/30 px-8 text-[11px] uppercase tracking-[0.34em] text-ivory transition-colors duration-300 hover:border-soft-gold hover:text-soft-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-onyx/60 sm:h-[3.25rem] sm:w-auto sm:justify-start sm:text-[12px]"
             >
               {intro.cta.label}
               <ArrowRight
@@ -123,7 +127,7 @@ export default function HomeHero() {
             </Link>
             <Link
               href="/shop"
-              className="inline-flex h-12 items-center px-5 text-[11px] uppercase tracking-[0.3em] text-ivory/70 underline-offset-4 transition-colors hover:text-ivory sm:h-[3.25rem] sm:text-[12px]"
+              className="inline-flex h-12 min-h-12 touch-manipulation items-center justify-center px-5 text-[11px] uppercase tracking-[0.3em] text-ivory/70 underline-offset-4 transition-colors hover:text-ivory sm:h-[3.25rem] sm:justify-start sm:text-[12px]"
             >
               Shop
             </Link>
@@ -135,7 +139,7 @@ export default function HomeHero() {
             initial={reduceMotion ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, ease, delay: 0.08 }}
-            className="flex w-full max-w-[300px] flex-col items-center self-center sm:max-w-[360px] lg:max-w-[380px] lg:items-end lg:self-auto"
+            className="flex w-full max-w-[min(100%,320px)] flex-col items-center self-center sm:max-w-[360px] lg:max-w-[380px] lg:items-end lg:self-auto"
           >
             <div className="relative w-full">
               <AnimatePresence mode="wait" initial={false}>
@@ -186,20 +190,30 @@ export default function HomeHero() {
             </div>
 
             {heroProducts.length > 1 ? (
-              <div className="mt-4 flex max-w-full flex-wrap justify-center gap-1.5 lg:justify-end">
+              <div
+                role="tablist"
+                aria-label="Düfte im Hero"
+                className="mt-3 flex max-w-full justify-center gap-1 overflow-x-auto overflow-y-hidden py-2 [-ms-overflow-style:none] [scrollbar-width:none] lg:mt-4 lg:max-w-none lg:flex-wrap lg:justify-end [&::-webkit-scrollbar]:hidden"
+              >
                 {heroProducts.map((p, i) => (
                   <button
                     key={p.id}
                     type="button"
+                    role="tab"
                     aria-label={`${p.name} anzeigen`}
-                    aria-current={i === index % heroProducts.length}
+                    aria-selected={i === index % heroProducts.length}
                     onClick={() => setIndex(i)}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${
-                      i === index % heroProducts.length
-                        ? "w-6 bg-soft-gold"
-                        : "w-1.5 bg-ivory/30 hover:bg-ivory/50"
-                    }`}
-                  />
+                    className="flex h-11 min-w-11 shrink-0 touch-manipulation items-center justify-center rounded-full outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+                  >
+                    <span
+                      aria-hidden
+                      className={`block rounded-full transition-all duration-300 ${
+                        i === index % heroProducts.length
+                          ? "h-1.5 w-6 bg-soft-gold"
+                          : "h-1.5 w-1.5 bg-ivory/35 hover:bg-ivory/55"
+                      }`}
+                    />
+                  </button>
                 ))}
               </div>
             ) : null}
@@ -210,7 +224,7 @@ export default function HomeHero() {
       <a
         href="#after-hero"
         aria-label="Weiter zum Inhalt"
-        className="group/scroll absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-[10px] uppercase tracking-[0.4em] text-ivory/50 transition-colors hover:text-ivory/80"
+        className="group/scroll absolute bottom-[max(1.25rem,env(safe-area-inset-bottom,0px)+0.5rem)] left-1/2 z-10 flex min-h-[44px] min-w-[44px] -translate-x-1/2 touch-manipulation flex-col items-center justify-center gap-1.5 text-[10px] uppercase tracking-[0.4em] text-ivory/50 transition-colors hover:text-ivory/80 sm:bottom-6"
       >
         <span>Scroll</span>
         <span

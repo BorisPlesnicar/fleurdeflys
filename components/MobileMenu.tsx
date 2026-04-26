@@ -52,13 +52,13 @@ export default function MobileMenu({ open, onClose }: Props) {
             aria-hidden
           />
           <motion.aside
-            className="absolute right-0 top-0 h-full w-[88%] max-w-sm bg-ivory shadow-[0_30px_80px_-20px_rgba(18,18,18,0.25)] flex flex-col"
+            className="absolute right-0 top-0 flex h-full w-[min(92vw,24rem)] max-w-sm flex-col border-l border-border-cream/80 bg-[color-mix(in_srgb,var(--ivory)_92%,transparent)] shadow-[0_30px_80px_-20px_rgba(18,18,18,0.25)] backdrop-blur-xl backdrop-saturate-150 supports-[backdrop-filter]:bg-[color-mix(in_srgb,var(--ivory)_88%,transparent)]"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="flex items-center justify-between px-6 h-20 border-b border-border-cream/70">
+            <div className="flex h-[calc(5rem+env(safe-area-inset-top,0px))] min-h-20 items-center justify-between border-b border-border-cream/70 px-5 pt-[env(safe-area-inset-top,0px)]">
               <div className="flex items-center gap-3">
                 <Image
                   src={LOGO_SRC}
@@ -81,7 +81,7 @@ export default function MobileMenu({ open, onClose }: Props) {
               </button>
             </div>
 
-            <nav className="flex flex-1 flex-col gap-6 px-6 pt-12">
+            <nav className="flex flex-1 flex-col gap-2 overflow-y-auto overscroll-contain px-5 pt-8">
               {NAV_LINKS.map((link, idx) => {
                 const active = isActive(pathname, link.href);
                 return (
@@ -98,10 +98,10 @@ export default function MobileMenu({ open, onClose }: Props) {
                     <Link
                       href={link.href}
                       onClick={onClose}
-                      className="group flex items-end justify-between border-b border-border-soft pb-5"
+                      className="group flex min-h-[3.25rem] items-end justify-between border-b border-border-soft py-4 pb-5 touch-manipulation active:bg-champagne/40"
                     >
                       <span
-                        className={`font-display text-[34px] leading-none tracking-tight transition-colors ${
+                        className={`font-display text-[clamp(1.65rem,8vw,2.125rem)] leading-none tracking-tight transition-colors ${
                           active
                             ? "text-dark-gold"
                             : "text-onyx group-hover:text-dark-gold"
@@ -110,8 +110,8 @@ export default function MobileMenu({ open, onClose }: Props) {
                         {link.label}
                       </span>
                       {active && (
-                        <span className="text-[10px] uppercase tracking-[0.38em] text-dark-gold">
-                          — now
+                        <span className="shrink-0 pb-0.5 text-[10px] uppercase tracking-[0.38em] text-dark-gold">
+                          hier
                         </span>
                       )}
                     </Link>
@@ -120,7 +120,7 @@ export default function MobileMenu({ open, onClose }: Props) {
               })}
             </nav>
 
-            <div className="px-6 pb-10 pt-8">
+            <div className="border-t border-border-soft/80 px-5 pb-[max(2.5rem,env(safe-area-inset-bottom,0px)+1.5rem)] pt-8">
               <div className="divider-gold mb-6" />
               <p className="eyebrow mb-3">Maison</p>
               <p className="font-display text-[20px] italic leading-snug text-onyx">

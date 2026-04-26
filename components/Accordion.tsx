@@ -74,7 +74,7 @@ export default function Accordion({
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => toggle(item.id)}
-                className="group flex w-full items-center justify-between gap-6 py-7 text-left transition-colors duration-500 hover:text-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory sm:py-8"
+                className="group flex min-h-14 w-full touch-manipulation items-center justify-between gap-4 py-5 text-left transition-colors duration-500 hover:text-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory sm:min-h-0 sm:gap-6 sm:py-8"
               >
                 <span className="text-[11px] uppercase tracking-[0.38em] text-onyx transition-colors duration-500 group-hover:text-dark-gold sm:text-[12px]">
                   {item.label}

@@ -66,7 +66,7 @@ export default function ProductImagePlaceholder({
         priority={priority}
         sizes={sizes}
         data-zoom
-        className={`object-contain object-center p-10 mix-blend-multiply sm:p-14 ${imageClassName}`.trim()}
+        className={`object-contain object-center p-7 mix-blend-multiply sm:p-12 ${imageClassName}`.trim()}
       />
 
       {/* Category tag */}

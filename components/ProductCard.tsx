@@ -36,10 +36,10 @@ export default function ProductCard({ product, index = 0 }: Props) {
         <ProductImagePlaceholder product={product} />
       </Link>
 
-      <div className="flex flex-1 flex-col gap-6 p-6 sm:p-8">
+      <div className="flex flex-1 flex-col gap-5 p-5 sm:gap-6 sm:p-8">
         <div>
           <Link href={href} className="block">
-            <h3 className="font-display text-[28px] leading-[1.08] tracking-tight text-onyx transition-colors duration-500 group-hover:text-dark-gold sm:text-[30px]">
+            <h3 className="font-display text-[1.625rem] leading-[1.08] tracking-tight text-onyx transition-colors duration-500 group-hover:text-dark-gold sm:text-[30px]">
               {product.name}
             </h3>
           </Link>
@@ -98,7 +98,7 @@ export default function ProductCard({ product, index = 0 }: Props) {
                   aria-checked={active}
                   type="button"
                   onClick={() => setSelectedMl(s.ml)}
-                  className={`flex-1 px-4 py-3 text-[10px] uppercase tracking-[0.34em] transition-colors duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/70 ${
+                  className={`min-h-11 flex-1 touch-manipulation px-3 py-3.5 text-[10px] uppercase tracking-[0.34em] transition-colors duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/70 sm:min-h-0 sm:px-4 ${
                     active
                       ? "bg-onyx text-ivory"
                       : "bg-transparent text-onyx hover:bg-onyx/5"
@@ -114,7 +114,7 @@ export default function ProductCard({ product, index = 0 }: Props) {
         <div className="mt-auto flex flex-col gap-3 pt-2">
           <button
             type="button"
-            className="group/btn inline-flex h-12 items-center justify-center gap-2 bg-onyx px-6 text-[11px] uppercase tracking-[0.36em] text-ivory transition-colors duration-500 hover:bg-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory"
+            className="group/btn inline-flex min-h-12 touch-manipulation items-center justify-center gap-2 bg-onyx px-6 py-3 text-[11px] uppercase tracking-[0.36em] text-ivory transition-colors duration-500 hover:bg-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory"
           >
             <Plus
               className="h-3.5 w-3.5 transition-transform duration-500 group-hover/btn:rotate-90"
@@ -124,7 +124,7 @@ export default function ProductCard({ product, index = 0 }: Props) {
           </button>
           <Link
             href={href}
-            className="group/btn inline-flex h-12 items-center justify-center gap-2 border border-onyx/20 bg-transparent px-6 text-[11px] uppercase tracking-[0.36em] text-onyx transition-colors duration-500 hover:border-dark-gold hover:text-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory"
+            className="group/btn inline-flex min-h-12 touch-manipulation items-center justify-center gap-2 border border-onyx/20 bg-transparent px-6 py-3 text-[11px] uppercase tracking-[0.36em] text-onyx transition-colors duration-500 hover:border-dark-gold hover:text-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory"
           >
             Details
             <ArrowUpRight

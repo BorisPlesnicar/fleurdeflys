@@ -39,7 +39,7 @@ export default function FragranceDetailView({ product }: Props) {
   const items = buildAccordionItems(product);
 
   return (
-    <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-12 lg:gap-20">
+    <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-20">
       {/* Image */}
       <motion.div
         initial={{ opacity: 0, y: 24 }}
@@ -55,7 +55,7 @@ export default function FragranceDetailView({ product }: Props) {
             aspect="4/5"
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
-            imageClassName="p-14 sm:p-20"
+            imageClassName="p-8 sm:p-14 lg:p-20"
           />
         </div>
 
@@ -74,10 +74,10 @@ export default function FragranceDetailView({ product }: Props) {
       >
         {/* Header */}
         <p className="eyebrow">{product.subtitle}</p>
-        <h1 className="display-headline mt-8 text-[44px] text-onyx sm:text-[60px] lg:text-[72px]">
+        <h1 className="display-headline mt-6 text-[clamp(2rem,9vw,2.75rem)] text-onyx sm:mt-8 sm:text-[60px] lg:text-[72px]">
           {product.name}
         </h1>
-        <p className="mt-6 font-display text-[22px] italic leading-snug text-dark-gold sm:text-[26px]">
+        <p className="mt-5 font-display text-[1.25rem] italic leading-snug text-dark-gold sm:mt-6 sm:text-[26px]">
           {product.shortDescription}
         </p>
 
@@ -127,7 +127,7 @@ export default function FragranceDetailView({ product }: Props) {
                   role="radio"
                   aria-checked={active}
                   onClick={() => setSelectedMl(s.ml)}
-                  className={`flex-1 px-5 py-4 text-left transition-colors duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/70 ${
+                  className={`min-h-[3.25rem] flex-1 touch-manipulation px-4 py-3.5 text-left transition-colors duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/70 sm:min-h-0 sm:px-5 sm:py-4 ${
                     active
                       ? "bg-onyx text-ivory"
                       : "bg-transparent text-onyx hover:bg-onyx/5"
@@ -147,17 +147,19 @@ export default function FragranceDetailView({ product }: Props) {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
             <button
               type="button"
-              className="group inline-flex h-14 flex-1 items-center justify-center gap-3 bg-onyx px-8 text-[11px] uppercase tracking-[0.36em] text-ivory transition-colors duration-500 hover:bg-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory"
+              className="group inline-flex min-h-14 w-full touch-manipulation flex-1 items-center justify-center gap-2.5 bg-onyx px-5 py-3.5 text-[10px] uppercase leading-snug tracking-[0.32em] text-ivory transition-colors duration-500 hover:bg-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory sm:w-auto sm:gap-3 sm:px-8 sm:text-[11px] sm:tracking-[0.36em]"
             >
               <Plus
-                className="h-4 w-4 transition-transform duration-500 group-hover:rotate-90"
+                className="h-4 w-4 shrink-0 transition-transform duration-500 group-hover:rotate-90"
                 strokeWidth={1.5}
               />
-              Add to Cart — {formatPriceEUR(selectedSize.priceEUR)}
+              <span className="text-center">
+                In den Warenkorb · {formatPriceEUR(selectedSize.priceEUR)}
+              </span>
             </button>
             <Link
               href="/shop"
-              className="group inline-flex h-14 items-center justify-center gap-3 border border-onyx/20 px-7 text-[11px] uppercase tracking-[0.36em] text-onyx transition-colors duration-500 hover:border-dark-gold hover:text-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory"
+              className="group inline-flex min-h-14 w-full touch-manipulation items-center justify-center gap-3 border border-onyx/20 px-7 py-3.5 text-[11px] uppercase tracking-[0.36em] text-onyx transition-colors duration-500 hover:border-dark-gold hover:text-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory sm:w-auto"
             >
               Alle Düfte
               <ArrowUpRight

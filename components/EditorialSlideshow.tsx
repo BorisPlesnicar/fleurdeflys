@@ -59,7 +59,7 @@ export default function EditorialSlideshow() {
       className="relative border-t border-border-cream/60 bg-[linear-gradient(180deg,#f8f5ef_0%,#f0e9de_55%,#ece3d2_100%)] py-16 sm:py-20 lg:py-24"
       aria-labelledby="editorial-slideshow-heading"
     >
-      <div className="mx-auto max-w-6xl px-6 sm:px-10 lg:px-12">
+      <div className="mx-auto max-w-6xl px-4 pl-[max(1rem,env(safe-area-inset-left,0px))] pr-[max(1rem,env(safe-area-inset-right,0px))] sm:px-10 sm:pl-10 sm:pr-10 lg:px-12">
         <div className="max-w-xl">
           <p className="eyebrow">Momente</p>
           <h2
@@ -86,7 +86,7 @@ export default function EditorialSlideshow() {
           onMouseLeave={() => setPaused(false)}
           onFocus={() => setPaused(true)}
           onBlur={() => setPaused(false)}
-          className="relative mt-10 min-h-[340px] overflow-hidden rounded-[1.75rem] border border-border-cream/90 bg-onyx/5 shadow-lift sm:min-h-[380px] sm:rounded-[2rem] lg:mt-12 lg:h-[min(52vh,580px)]"
+          className="relative mt-10 min-h-[min(52svh,380px)] overflow-hidden rounded-2xl border border-border-cream/90 bg-onyx/5 shadow-lift sm:min-h-[380px] sm:rounded-[2rem] lg:mt-12 lg:h-[min(52vh,580px)]"
         >
           <AnimatePresence mode="sync" initial={false}>
             <motion.div
@@ -115,7 +115,7 @@ export default function EditorialSlideshow() {
             type="button"
             onClick={prev}
             aria-label="Vorheriges Bild"
-            className="glass-surface absolute left-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full text-ivory shadow-soft transition-all duration-500 hover:scale-105 hover:text-soft-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-onyx/30 sm:left-4 sm:h-12 sm:w-12"
+            className="glass-surface absolute left-[max(0.75rem,env(safe-area-inset-left,0px))] top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 touch-manipulation items-center justify-center rounded-full text-ivory shadow-soft transition-all duration-500 hover:scale-105 hover:text-soft-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-onyx/30 sm:left-4"
           >
             <ChevronLeft className="h-5 w-5" strokeWidth={1.5} />
           </button>
@@ -123,12 +123,12 @@ export default function EditorialSlideshow() {
             type="button"
             onClick={next}
             aria-label="Nächstes Bild"
-            className="glass-surface absolute right-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full text-ivory shadow-soft transition-all duration-500 hover:scale-105 hover:text-soft-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-onyx/30 sm:right-4 sm:h-12 sm:w-12"
+            className="glass-surface absolute right-[max(0.75rem,env(safe-area-inset-right,0px))] top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 touch-manipulation items-center justify-center rounded-full text-ivory shadow-soft transition-all duration-500 hover:scale-105 hover:text-soft-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-onyx/30 sm:right-4"
           >
             <ChevronRight className="h-5 w-5" strokeWidth={1.5} />
           </button>
 
-          <div className="absolute bottom-0 left-0 right-0 z-20 px-4 pb-4 sm:px-6 sm:pb-5">
+          <div className="absolute bottom-0 left-0 right-0 z-20 px-3 pb-[max(1rem,env(safe-area-inset-bottom,0px)+0.5rem)] sm:px-6 sm:pb-5">
             <div className="flex w-full max-w-md items-center gap-2 sm:gap-3">
               {EDITORIAL_SLIDES.map((s, i) => (
                 <button
@@ -242,7 +242,7 @@ function SlideContent({
       />
 
       <div
-        className={`absolute inset-0 z-10 flex px-5 pb-20 pt-16 sm:px-8 sm:pb-24 sm:pt-20 ${justifyClass}`}
+        className={`absolute inset-0 z-10 flex px-4 pb-[max(5.5rem,env(safe-area-inset-bottom,0px)+4.5rem)] pt-14 sm:px-8 sm:pb-24 sm:pt-20 ${justifyClass}`}
       >
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 18 }}
@@ -288,7 +288,7 @@ function SlideContent({
           >
             <Link
               href={slide.cta.href}
-              className="group/btn inline-flex h-12 items-center gap-2.5 border border-ivory/35 bg-ivory/5 px-7 text-[10px] uppercase tracking-[0.34em] text-ivory backdrop-blur-md transition-all duration-500 hover:border-soft-gold hover:bg-ivory/10 hover:text-soft-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-onyx/40 sm:h-[3.25rem] sm:px-8 sm:text-[11px]"
+              className="group/btn inline-flex min-h-12 w-full touch-manipulation items-center justify-center gap-2.5 border border-ivory/35 bg-ivory/5 px-7 py-3 text-[10px] uppercase tracking-[0.34em] text-ivory backdrop-blur-md transition-all duration-500 hover:border-soft-gold hover:bg-ivory/10 hover:text-soft-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-onyx/40 sm:h-[3.25rem] sm:w-auto sm:justify-start sm:px-8 sm:py-0 sm:text-[11px]"
             >
               {slide.cta.label}
               <ArrowRight

@@ -47,7 +47,7 @@ export default function Section({
         children
       ) : (
         <div
-          className={`mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-14 ${containerClassName}`.trim()}
+          className={`mx-auto max-w-[1280px] px-4 pl-[max(1rem,env(safe-area-inset-left,0px))] pr-[max(1rem,env(safe-area-inset-right,0px))] sm:px-8 sm:pl-8 sm:pr-8 lg:px-14 ${containerClassName}`.trim()}
         >
           {children}
         </div>

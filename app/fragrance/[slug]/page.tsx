@@ -50,7 +50,7 @@ export default async function FragrancePage({
       <main className="flex-1">
         {/* Breadcrumb / back link */}
         <div className="border-b border-border-soft bg-ivory">
-          <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-5 pb-6 pt-28 sm:px-8 sm:pt-36 lg:px-14 lg:pt-40">
+          <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-3 px-4 pl-[max(1rem,env(safe-area-inset-left,0px))] pr-[max(1rem,env(safe-area-inset-right,0px))] pb-6 pt-[max(6.5rem,env(safe-area-inset-top,0px)+4.5rem)] sm:gap-4 sm:px-8 sm:pt-36 sm:pl-8 sm:pr-8 lg:px-14 lg:pt-40">
             <Link
               href="/shop"
               className="group inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.38em] text-muted-ink transition-colors hover:text-dark-gold"

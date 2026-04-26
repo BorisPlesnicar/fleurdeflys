@@ -37,9 +37,9 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${surfaceClass} ${textColor}`}
+        className={`fixed inset-x-0 top-0 z-40 pt-[env(safe-area-inset-top,0px)] transition-all duration-500 ${surfaceClass} ${textColor}`}
       >
-        <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 sm:h-20 sm:px-8 lg:px-14">
+        <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-4 pl-[max(1rem,env(safe-area-inset-left,0px))] pr-[max(1rem,env(safe-area-inset-right,0px))] sm:h-20 sm:px-8 sm:pl-8 sm:pr-8 lg:px-14">
           <Link
             href="/"
             aria-label={BRAND.name}

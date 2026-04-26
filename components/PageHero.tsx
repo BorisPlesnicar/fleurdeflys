@@ -38,8 +38,8 @@ export default function PageHero({
     <section
       className={`relative isolate overflow-hidden border-b border-border-soft bg-ivory ${
         compact
-          ? "pb-16 pt-32 sm:pb-20 sm:pt-40 lg:pt-48"
-          : "pb-20 pt-40 sm:pb-28 sm:pt-48 lg:pt-56"
+          ? "pb-14 pt-[max(7.5rem,env(safe-area-inset-top,0px)+5.25rem)] sm:pb-20 sm:pt-40 lg:pt-48"
+          : "pb-16 pt-[max(8.5rem,env(safe-area-inset-top,0px)+5.75rem)] sm:pb-28 sm:pt-48 lg:pt-56"
       }`}
     >
       {/* Atmospheric gold aura */}
@@ -53,7 +53,7 @@ export default function PageHero({
       />
       <div aria-hidden className="grain absolute inset-0 -z-10" />
 
-      <div className="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-14">
+      <div className="mx-auto max-w-[1280px] px-4 pl-[max(1rem,env(safe-area-inset-left,0px))] pr-[max(1rem,env(safe-area-inset-right,0px))] sm:px-8 sm:pl-8 sm:pr-8 lg:px-14">
         <div
           className={`grid grid-cols-1 gap-12 ${
             aside ? "lg:grid-cols-12 lg:gap-16" : ""
@@ -80,7 +80,7 @@ export default function PageHero({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 1, ease, delay: 0.1 }}
-              className={`display-headline mt-8 text-onyx text-[clamp(2.75rem,8vw,6.25rem)] ${
+              className={`display-headline mt-6 text-onyx text-[clamp(2.25rem,8vw,6.25rem)] sm:mt-8 ${
                 isCenter ? "mx-auto max-w-[16ch]" : "max-w-[20ch]"
               }`}
             >

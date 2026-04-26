@@ -52,7 +52,7 @@ export default function ProductShowcase() {
                 aspect="4/5"
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                imageClassName="p-12 sm:p-16"
+                imageClassName="p-7 sm:p-12 lg:p-16"
               />
             </Link>
           </div>
@@ -67,11 +67,11 @@ export default function ProductShowcase() {
           className="order-1 lg:order-2 lg:col-span-6"
         >
           <p className="eyebrow">La Signature · {p.category}</p>
-          <h2 className="display-headline mt-8 text-[44px] text-onyx sm:text-[60px] lg:text-[76px]">
+          <h2 className="display-headline mt-6 text-[clamp(2.15rem,9vw,2.85rem)] text-onyx sm:mt-8 sm:text-[60px] lg:text-[76px]">
             {p.name}
           </h2>
 
-          <p className="mt-8 max-w-md font-display text-[22px] italic leading-snug text-dark-gold sm:text-[26px]">
+          <p className="mt-6 max-w-md font-display text-[1.125rem] italic leading-snug text-dark-gold sm:mt-8 sm:text-[26px]">
             {p.shortDescription}
           </p>
 
@@ -96,10 +96,10 @@ export default function ProductShowcase() {
             </div>
           </dl>
 
-          <div className="mt-14 flex flex-col gap-3 sm:flex-row sm:gap-4">
+          <div className="mt-10 flex w-full flex-col gap-3 sm:mt-14 sm:w-auto sm:flex-row sm:gap-4">
             <Link
               href={href}
-              className="group inline-flex h-14 items-center justify-center gap-3 bg-onyx px-10 text-[11px] uppercase tracking-[0.36em] text-ivory transition-colors duration-500 hover:bg-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory"
+              className="group inline-flex min-h-14 w-full touch-manipulation items-center justify-center gap-3 bg-onyx px-8 py-3.5 text-[11px] uppercase tracking-[0.36em] text-ivory transition-colors duration-500 hover:bg-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory sm:w-auto sm:px-10"
             >
               View Fragrance
               <ArrowUpRight
@@ -109,7 +109,7 @@ export default function ProductShowcase() {
             </Link>
             <Link
               href="/shop"
-              className="group inline-flex h-14 items-center justify-center gap-3 border border-onyx/25 px-10 text-[11px] uppercase tracking-[0.36em] text-onyx transition-colors duration-500 hover:border-dark-gold hover:text-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory"
+              className="group inline-flex min-h-14 w-full touch-manipulation items-center justify-center gap-3 border border-onyx/25 px-8 py-3.5 text-[11px] uppercase tracking-[0.36em] text-onyx transition-colors duration-500 hover:border-dark-gold hover:text-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/80 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory sm:w-auto sm:px-10"
             >
               Alle Düfte
             </Link>

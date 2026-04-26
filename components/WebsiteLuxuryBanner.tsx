@@ -8,7 +8,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function WebsiteLuxuryBanner() {
   return (
-    <section className="relative isolate overflow-hidden bg-onyx py-32 text-ivory sm:py-40 lg:py-56">
+    <section className="relative isolate overflow-hidden bg-onyx py-24 text-ivory sm:py-40 lg:py-56">
       <div
         className="absolute inset-0 -z-10 opacity-80"
         style={{
@@ -18,7 +18,7 @@ export default function WebsiteLuxuryBanner() {
       />
       <div className="grain absolute inset-0 -z-10 opacity-70" />
 
-      <div className="mx-auto max-w-[1280px] px-5 text-center sm:px-8 lg:px-14">
+      <div className="mx-auto max-w-[1280px] px-4 pl-[max(1rem,env(safe-area-inset-left,0px))] pr-[max(1rem,env(safe-area-inset-right,0px))] text-center sm:px-8 sm:pl-8 sm:pr-8 lg:px-14">
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export default function WebsiteLuxuryBanner() {
         >
           <Link
             href="/shop"
-            className="group inline-flex h-14 items-center gap-3 border border-soft-gold/60 px-10 text-[11px] uppercase tracking-[0.36em] text-soft-gold transition-all duration-500 hover:border-soft-gold hover:bg-soft-gold hover:text-onyx"
+            className="group inline-flex min-h-14 w-full max-w-sm touch-manipulation items-center justify-center gap-3 border border-soft-gold/60 px-8 py-3.5 text-[11px] uppercase tracking-[0.36em] text-soft-gold transition-all duration-500 hover:border-soft-gold hover:bg-soft-gold hover:text-onyx sm:w-auto sm:max-w-none sm:px-10"
           >
             <span className="h-px w-5 bg-current transition-all duration-500 group-hover:w-10" />
             Discover Collection

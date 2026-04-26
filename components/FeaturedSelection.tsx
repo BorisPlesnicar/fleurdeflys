@@ -53,7 +53,7 @@ export default function FeaturedSelection() {
       >
         <div className="max-w-2xl">
           <p className="eyebrow">Une sélection</p>
-          <h2 className="display-headline mt-8 text-[40px] text-onyx sm:text-[52px] lg:text-[64px]">
+          <h2 className="display-headline mt-6 text-[clamp(2rem,8.5vw,2.65rem)] text-onyx sm:mt-8 sm:text-[52px] lg:text-[64px]">
             Ein erster Blick
             <br />
             <span className="italic text-dark-gold">in die Maison.</span>
@@ -87,7 +87,7 @@ export default function FeaturedSelection() {
       <div className="mt-20 flex justify-center sm:mt-24">
         <Link
           href="/shop"
-          className="group inline-flex h-14 items-center gap-3 border border-onyx/20 px-10 text-[11px] uppercase tracking-[0.36em] text-onyx transition-colors duration-500 hover:border-dark-gold hover:text-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory"
+          className="group inline-flex min-h-14 w-full max-w-sm touch-manipulation items-center justify-center gap-3 border border-onyx/20 px-8 py-3.5 text-[11px] uppercase tracking-[0.36em] text-onyx transition-colors duration-500 hover:border-dark-gold hover:text-dark-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-soft-gold/70 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory sm:h-14 sm:w-auto sm:max-w-none sm:px-10 sm:py-0"
         >
           <span className="h-px w-5 bg-current transition-all duration-500 group-hover:w-10" />
           Zur Boutique

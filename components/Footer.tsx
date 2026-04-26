@@ -17,7 +17,7 @@ export default function Footer() {
             "radial-gradient(800px 300px at 0% 0%, rgba(201,162,74,0.1), transparent 60%), radial-gradient(900px 400px at 100% 100%, rgba(201,162,74,0.08), transparent 60%)",
         }}
       />
-      <div className="relative mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-20 sm:py-24 lg:py-28">
+      <div className="relative mx-auto max-w-[1440px] px-4 pl-[max(1rem,env(safe-area-inset-left,0px))] pr-[max(1rem,env(safe-area-inset-right,0px))] py-16 pb-[max(4rem,env(safe-area-inset-bottom,0px)+2.5rem)] sm:px-8 sm:py-24 sm:pb-24 sm:pl-8 sm:pr-8 lg:px-14 lg:py-28 lg:pb-28">
         {/* Top row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Brand */}

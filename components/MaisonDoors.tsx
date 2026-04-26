@@ -58,14 +58,14 @@ export default function MaisonDoors() {
           >
             <Link
               href={door.href}
-              className="group relative flex h-full flex-col justify-between gap-10 bg-ivory-soft p-10 transition-colors duration-500 hover:bg-ivory sm:p-14"
+              className="group relative flex h-full flex-col justify-between gap-8 bg-ivory-soft p-8 transition-colors duration-500 hover:bg-ivory sm:gap-10 sm:p-14"
             >
               <span className="text-[10px] uppercase tracking-[0.38em] text-dark-gold">
                 {door.eyebrow}
               </span>
 
               <div>
-                <h3 className="display-headline text-[34px] text-onyx sm:text-[44px]">
+                <h3 className="display-headline text-[clamp(1.75rem,6vw,2.25rem)] text-onyx sm:text-[44px]">
                   {door.title}
                 </h3>
                 <p className="mt-6 max-w-sm text-[13.5px] leading-[1.85] text-muted-ink">

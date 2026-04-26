@@ -20,12 +20,12 @@ export default function CartPage() {
     <div className="flex flex-1 flex-col bg-ivory text-onyx">
       <Header />
       <main className="flex-1">
-        <Section size="lg" className="pt-40 sm:pt-48 lg:pt-56">
-          <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-20">
+        <Section size="lg" className="pt-[max(8.5rem,env(safe-area-inset-top,0px)+5.5rem)] sm:pt-48 lg:pt-56">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
             {/* Empty state */}
             <div className="lg:col-span-7">
               <p className="eyebrow">Votre Panier</p>
-              <h1 className="display-headline mt-8 text-[44px] text-onyx sm:text-[60px] lg:text-[72px]">
+              <h1 className="display-headline mt-6 text-[clamp(2rem,9vw,2.75rem)] text-onyx sm:mt-8 sm:text-[60px] lg:text-[72px]">
                 Your Cart
               </h1>
 
